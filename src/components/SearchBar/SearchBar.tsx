@@ -22,7 +22,7 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
       <div className={css.container}>
         <a
           className={css.link}
-          href="<https://www.themoviedb.org/>"
+          href="https://www.themoviedb.org/"
           target="_blank"
           rel="noopener noreferrer"
         >
