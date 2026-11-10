@@ -7,7 +7,6 @@ const apiClient = axios.create({
     Accept: 'application/json',
     Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_TOKEN,
   },
-  withCredentials: true,
   responseType: 'json',
 });
 
