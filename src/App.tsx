@@ -3,6 +3,8 @@ import type { Movie } from './types/movie';
 import { fetchMovies } from './services/movieService';
 import SearchBar from './components/SearchBar/SearchBar';
 import toast from 'react-hot-toast';
+import Loader from './components/Loader/Loader';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -31,6 +33,8 @@ export default function App() {
   return (
     <>
       <SearchBar onSubmit={handleSearch} />
+      {isLoading && <Loader />}
+      {isError && <ErrorMessage />}
     </>
   );
 }
