@@ -13,6 +13,10 @@ export const fetchMovies = async (query: string): Promise<Movie[]> => {
       page: 1,
       query,
     },
+    headers: {
+      Accept: 'application/json',
+      Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_TOKEN,
+    },
   });
 
   return response.data.results;
